@@ -6,21 +6,24 @@ export class EmployeeModel {
     @PrimaryColumn({ name: 'registration', nullable: false })
     public registration: number
 
-    @Column({ name: 'name' })
+    @Column({ name: 'name', nullable: false })
     public name: string
 
-    @Column({ name: 'contract' })
+    @Column({ name: 'contract', nullable: false })
     public contract: ContractProps
 
-    @Column({ name: 'admission_date' })
+    @Column({ name: 'admission_date', nullable: false })
     public admissionDate: Date
 
-    @Column({ name: 'password' })
+    @Column({ name: 'password', nullable: false })
     public password: string
 
-    @Column({ name: 'email' })
+    @Column({ name: 'email', nullable: false })
     public email: string
 
-    @Column({ name: 'employee_function' })
+    @Column({ name: 'employee_function', nullable: false })
     public employeeFunction: string
+
+    @Column({ name: 'manager_registration', nullable: true })
+    public managerRistration: number
 }
